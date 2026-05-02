@@ -48,4 +48,7 @@ npm start
 - [discord.js](https://discord.js.org/) v14
 - [@discordjs/voice](https://github.com/discordjs/voice)
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp)
-- FFmpeg
+
+## ライセンス
+
+このプロジェクトは [MIT License](LICENSE) のもとで公開されています。
