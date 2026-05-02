@@ -16,7 +16,7 @@ module.exports = {
     await interaction.deferReply();
 
     const query = interaction.options.getString('query', true);
-    console.log('query:', query); // デバッグ用
+    console.log('query:', query);
 
     const voiceChannel = interaction.member?.voice?.channel;
 

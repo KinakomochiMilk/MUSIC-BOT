@@ -31,7 +31,7 @@ async function getAudioStream(url) {
 
   ytdlpProc.stdout.pipe(ffmpegProc.stdin);
 
-  // パイプエラーを握りつぶす
+
   ytdlpProc.stdout.on('error', () => {});
   ffmpegProc.stdin.on('error', () => {});
   ffmpegProc.stdout.on('error', () => {});
@@ -88,14 +88,14 @@ async function playNext(guildQueue, musicQueue) {
 
     guildQueue.player.once(AudioPlayerStatus.Idle, () => {
       if (guildQueue.repeatMode === 'one') {
-        // 1曲リピート：そのまま再度再生
+
         playNext(guildQueue, musicQueue);
       } else if (guildQueue.repeatMode === 'all') {
-        // 全曲リピート：先頭の曲を末尾に移動
+
         guildQueue.songs.push(guildQueue.songs.shift());
         playNext(guildQueue, musicQueue);
       } else {
-        // リピートなし
+
         guildQueue.songs.shift();
         playNext(guildQueue, musicQueue);
       }
